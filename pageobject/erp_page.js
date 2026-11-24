@@ -120,4 +120,6 @@ export const locators = {
   shipmentUpdatedToast: (no) => `text=Shipment ${no} updated`,
 
   errorMessage: 'Expected element was not visible on the ERP page'
+
+  // errorMessage: should spot the exact place not as common method, apply this method for toast
 }

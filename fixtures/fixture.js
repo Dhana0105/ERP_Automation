@@ -9,5 +9,7 @@ const test = base.extend({
   schedule:async({page},use)=>{
     //await use(new schedule(page))
   }
+
+  // add relative pages like HBL, MBL and login
 })
 export default test

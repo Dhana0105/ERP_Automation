@@ -24,7 +24,7 @@ class Erp extends BasePage {
         await this.waitAndClick(L.shipmentTypeOption(data.mbl.direction))
         await this.waitAndClick(L.consolOperator)
         await this.waitAndClick(L.shipmentTypeOption(data.mbl.masterType))
-        await this.waitAndClick(L.carrier )
+        await this.waitAndClick(L.carrier)
         await this.waitAndClick(L.shipmentTypeOption(data.mbl.carrier))
         await this.waitAndClick(L.polCombobox)
         await this.waitAndClick(L.shipmentTypeOption(data.mbl.poloption))
