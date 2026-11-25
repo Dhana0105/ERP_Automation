@@ -1,38 +1,14 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test'
 
 export default defineConfig({
   testDir: './tests',
-
-  expect: {
-    timeout: 10000,
-  },
-
-  workers: 1,
-
-  reporter: [
-    ['list'],
-    ['html', { open: 'never' }],
-  ],
-
+  timeout: 180000,
   use: {
-    
-    actionTimeout: 15000,
-    navigationTimeout: 30000,
-    trace: 'retain-on-failure',
+    headless: false,
     screenshot: 'only-on-failure',
+    trace: 'retain-on-failure',
+    viewport:{width: 1265, height: 585},
   },
-
-  projects: [
-    {
-      name: 'chromium',
-      use: {
-        ...devices['Desktop Chrome'],
-        headless: false,
-          viewport: {
-      width: 1265,
-      height: 585,
-    },
-      },
-    },
-  ],
-});
+  reporter: 'html',
+  
+})
